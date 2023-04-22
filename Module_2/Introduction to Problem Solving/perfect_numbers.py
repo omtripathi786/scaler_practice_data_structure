@@ -8,8 +8,15 @@ Problem Constraints
 
 
 def solve(A):
-    pass
+    p_sum = 0
+    for i in range(1, A // 2 + 1):
+        if A % i == 0:
+            p_sum += i
+    if p_sum == A:
+        return 1
+    else:
+        return 0
 
 
 if __name__ == '__main__':
-    print(solve(5))
+    print(solve(4))
