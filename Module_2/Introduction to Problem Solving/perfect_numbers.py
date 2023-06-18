@@ -19,4 +19,4 @@ def solve(A):
 
 
 if __name__ == '__main__':
-    print(solve(4))
+    print(solve(6))
