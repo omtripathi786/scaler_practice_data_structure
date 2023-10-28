@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6de45507-db7b-4f03-91fd-cc45280e92fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module_2/carry_forward/carry_forward.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module_3/Recursion_1/recursion _note.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module_4/Maths_1/math_1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module_4/Maths_1/pair_sum_divisible_M.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scaler_practice_data_structure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scaler_practice_data_structure.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +168,8 @@
       <workItem from="1697809874539" duration="6783000" />
       <workItem from="1698134361628" duration="620000" />
       <workItem from="1698301015906" duration="6229000" />
-      <workItem from="1698344181241" duration="6284000" />
+      <workItem from="1698344181241" duration="8603000" />
+      <workItem from="1698499693362" duration="549000" />
     </task>
     <servers />
   </component>
