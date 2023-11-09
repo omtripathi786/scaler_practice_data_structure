@@ -39,28 +39,27 @@ def brute_force(A, B):
 
 def solve(A, B):
     n = len(A)
-    hash_map = {}
-    for i in range(n):
-        if A[i] % B not in hash_map:
-            hash_map[A[i] % B] = 1
-        else:
-            hash_map[A[i] % B] += 1
+    hm = {}
     ans = 0
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         rema = A[i] % B
         if rema == 0:
             remb = 0
         else:
             remb = B - rema
-        ans += hash_map[remb]
-        hash_map[rema] += 1
+
+        ans += hm.get(remb, 0)
+        if rema not in hm:
+            hm[rema] = 1
+        else:
+            hm[rema] += 1
     return ans
 
 
 if __name__ == '__main__':
-    A = [5, 17, 100, 11]
-    B = 28
-    #A = [2, 3, 4, 8, 16, 15, 5, 12, 7, 18, 10, 9, 16, 21]
-    #B = 6
+    A = [4, 3, 6, 8, 12]
+    B = 3
+    # A = [2, 3, 4, 8, 16, 15, 5, 12, 7, 18, 10, 9, 16, 21]
+    # B = 6
     # print(brute_force(A, B))
     print(solve(A, B))
