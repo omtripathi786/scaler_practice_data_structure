@@ -38,6 +38,24 @@ class LinkedList:
             current = current.next
         print('None')
 
+    @staticmethod
+    def print_cyclic_ll(A):
+        """
+        Print a cyclic linked list.
+        Stop printing when a loop is encountered.
+        """
+        current = A
+        nodes = set()
+        while current:
+            if current in nodes:
+                print('Loop starts  |  and End at-->', current.value)
+                break
+            print(current.value, end='-->')
+            nodes.add(current)
+            current = current.next
+        else:
+            print('None')
+
     def get_value(self, position):
         """Get an element from a particular position.
         Assume the first position is "1".
@@ -101,7 +119,7 @@ class LinkedList:
     @staticmethod
     def find_middle_element(A):
         slow = fast = A
-        while fast and fast.next:
+        while fast and fast.next and fast.next.next:
             slow = slow.next
             fast = fast.next.next
         return slow.value
@@ -115,6 +133,25 @@ def create_ll(arr):
     for i in arr[1:]:
         node = Node(i)
         linked_list.append(node)
+    return linked_list
+
+
+def create_cyclic_ll(arr, loop_index):
+    """
+    Create a cyclic linked list from an array of values.
+    The last node in the list will point to the node at loop_index.
+    """
+    if len(arr) == 0:
+        return None
+    head = Node(arr[0])
+    linked_list = LinkedList(head)
+    nodes = [head]
+    for i in arr[1:]:
+        node = Node(i)
+        linked_list.append(node)
+        nodes.append(node)
+    # Create the loop
+    nodes[-1].next = nodes[loop_index]
     return linked_list
 
 
