@@ -128,3 +128,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/Module_6/Tree/Tree_0_1/Digraph.gv
+/Module_6/Tree/Tree_0_1/Digraph.gv.pdf
