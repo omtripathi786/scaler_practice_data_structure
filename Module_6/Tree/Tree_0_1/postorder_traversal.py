@@ -29,7 +29,7 @@ from binarytree import build
 
 
 def postorder_traversal(root, ans=None):
-    # left, node, right (L, N, R)
+    # left, right, node (L, R, N)
     if ans is None:
         ans = []
     if root is not None:
@@ -39,8 +39,23 @@ def postorder_traversal(root, ans=None):
     return ans
 
 
+def iterative_traversal(root):
+    # left, right, node (L, R, N)
+    stack = [root]
+    ans = []
+    while stack:
+        node = stack.pop()
+        ans.append(node.value)
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return ans[::-1]
+
+
 if __name__ == '__main__':
     nodes = [1, 6, 2, None, None, 3]
     binary_tree = build(nodes)
     print(binary_tree)
     print(postorder_traversal(binary_tree))
+    print(iterative_traversal(binary_tree))
