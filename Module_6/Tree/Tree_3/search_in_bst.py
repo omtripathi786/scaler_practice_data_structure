@@ -47,8 +47,33 @@ def search(root, x):
     return 'No Match'
 
 
+def search2(root, x):
+    if root is None:
+        return False
+    if root.value == x:
+        return True
+    return search2(root.left, x) or search2(root.right, x)
+
+
+def get_path(root, x):
+    if root is None:
+        return False
+    if root.value == x:
+        ans.append(root.value)
+        return True
+    if get_path(root.left, x) or get_path(root.right, x):
+        ans.append(root.value)
+        return True
+    else:
+        return False
+
+
 if __name__ == "__main__":
     nodes = [7, 3, 15, 1, 5, 8, 20, 0, 2, 4, 6, None, None, 17, 26]
     root = build(nodes)
     print(root)
     print(search(root, 8))
+    print(search2(root, 24))
+    ans = []
+    get_path(root, 26)
+    print(ans[::-1])
