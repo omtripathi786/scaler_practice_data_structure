@@ -51,4 +51,4 @@ if __name__ == '__main__':
     B = [-2, 1, -3, 4, -1, 2, 1, -5]
     print(max_subarray_sum(A))
     print(max_subarray_sum(B))
-    print(max_subarray(B))
+    print(max_subarray(A))
