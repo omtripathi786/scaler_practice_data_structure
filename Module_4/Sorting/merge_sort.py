@@ -1,38 +1,37 @@
-def merge_sort(A, left, right):
-    if left == right:
-        return
-    mid = (left + right) // 2
-    merge_sort(A, left, mid)
-    merge_sort(A, mid + 1, right)
-    A[left:right + 1] = merge_two_sorted_array(A[left:mid + 1], A[mid + 1:right + 1])
-    return A
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
 
 
-def merge_two_sorted_array(A, B):
-    m, n = len(A), len(B)
+def merge(left, right):
+    m, n = len(left), len(right)
     i, j, k = 0, 0, 0
-    ans = [0] * (m + n)
+    merged = [0] * (m + n)
     while i < m and j < n:
-        if A[i] <= B[j]:
-            ans[k] = A[i]
+        if left[i] < right[j]:
+            merged[k] = left[i]
             i += 1
-            k += 1
         else:
-            ans[k] = B[j]
-            k += 1
+            merged[k] = right[j]
             j += 1
+        k += 1
+
     while i < m:
-        ans[k] = A[i]
+        merged[k] = left[i]
         i += 1
         k += 1
+
     while j < n:
-        ans[k] = B[j]
+        merged[k] = right[j]
         j += 1
         k += 1
-
-    return ans
+    return merged
 
 
 if __name__ == '__main__':
     A = [3, 2, 6, 1, 9, 7, 7]
-    print(merge_sort(A, 0, len(A)))
+    print(merge_sort(A))

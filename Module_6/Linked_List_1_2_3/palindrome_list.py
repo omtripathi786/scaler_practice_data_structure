@@ -25,6 +25,7 @@ def is_palindrome(head):
         slow = slow.next
         fast = fast.next.next
     # reverse the second half
+    print(slow.value)
     prev = None
     while slow:
         nxt = slow.next
@@ -41,7 +42,7 @@ def is_palindrome(head):
 
 
 if __name__ == '__main__':
-    ll1 = link.create_ll([1, 2, 2, 1])
+    ll1 = link.create_ll([1, 3, 2, 1])
     ll2 = link.create_ll([1, 3, 2])
     ll1.print_ll(ll1.head)
-    print(is_palindrome(ll2.head))
+    print(is_palindrome(ll1.head))

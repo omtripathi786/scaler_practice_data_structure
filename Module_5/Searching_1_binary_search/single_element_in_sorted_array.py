@@ -31,13 +31,15 @@ def solve(A):
     left, right = 0, n - 1
     while left <= right:
         m = (left + right) // 2
-        if (A[m] == 0 or A[m] != A[m - 1]) and (m != n - 1 or A[m] != A[m + 1]):
+
+        if (A[m] == 0 or A[m] != A[m - 1]) and (m == n - 1 or A[m] != A[m + 1]):
             return A[m]
         if A[m] == A[m - 1]:
             ti = m - 1
         else:
             ti = m
-
+        print('left', 'right', 'm', 'ti')
+        print(left, right, m, ti)
         if ti % 2 == 0:
             left = m + 1
         else:
@@ -45,5 +47,5 @@ def solve(A):
 
 
 if __name__ == '__main__':
-    A = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 11, 11, 12, 12]
+    A = [2, 2, 5, 7, 7, 10, 10]
     print(solve(A))

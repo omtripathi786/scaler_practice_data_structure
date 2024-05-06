@@ -43,7 +43,7 @@ def solve(A, B):
                 high = m - 1
             else:
                 low = m + 1
-        # case 2:- right half is sorted
+        # case 3:- right half is sorted
         else:
             if A[m] < B <= A[high]:
                 low = m + 1

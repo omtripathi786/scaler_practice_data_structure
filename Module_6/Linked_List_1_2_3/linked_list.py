@@ -119,7 +119,7 @@ class LinkedList:
     @staticmethod
     def find_middle_element(A):
         slow = fast = A
-        while fast and fast.next and fast.next.next:
+        while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         return slow.value
@@ -164,6 +164,7 @@ if __name__ == '__main__':
     n4 = Node(4)
     n5 = Node(5)
     n6 = Node(6)
+    n7 = Node(7)
     # create linked list object with head node
     ll = LinkedList(n1)
     ll.append(n2)
@@ -183,4 +184,5 @@ if __name__ == '__main__':
     ll.print_ll(n1)
     A = ll.reverse_ll(n1)
     ll.print_ll(A)
+    ll.append(n7)
     print(ll.find_middle_element(A))
