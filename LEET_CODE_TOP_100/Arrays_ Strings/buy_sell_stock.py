@@ -24,22 +24,25 @@ Constraints:
 0 <= prices[i] <= 104
 """
 
+
 def brute_force(prices):
     max_profit = 0
     for i in range(len(prices)):
-        for j in range(i+1,len(prices)):
-            max_profit = max(max_profit,prices[j]-prices[i])
+        for j in range(i + 1, len(prices)):
+            max_profit = max(max_profit, prices[j] - prices[i])
     return max_profit
+
 
 def solution(prices):
     min_price = float("inf")
     max_profit = float("-inf")
     for price in prices:
-        min_price = min(min_price,price)
-        profit = price-min_price
-        max_profit = max(max_profit,profit)
+        min_price = min(min_price, price)
+        profit = price - min_price
+        max_profit = max(max_profit, profit)
     return max_profit
 
+
 if __name__ == '__main__':
-    prices = [7,1,5,3,6,4]
+    prices = [7, 1, 5, 3, 6, 4]
     print(solution(prices))
