@@ -29,7 +29,7 @@ def merge(word1, word2):
     a, b = 0, 0
     s = []
     word = 1
-    while a < B and b < A:
+    while a < A and b < B:
         if word == 1:
             s.append(word1[a])
             a += 1

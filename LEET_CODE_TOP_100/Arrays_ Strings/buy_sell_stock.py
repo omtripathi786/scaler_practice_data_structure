@@ -43,6 +43,18 @@ def solution(prices):
     return max_profit
 
 
+def max_sum(nums):
+    curr_max = float('-inf')
+    max_sum = float('-inf')
+    for num in nums:
+        curr_max = max(num, curr_max + num)
+        max_sum = max(curr_max, max_sum)
+
+    return max_sum
+
+
 if __name__ == '__main__':
     prices = [7, 1, 5, 3, 6, 4]
     print(solution(prices))
+    nums = [-2, 1, -3, 4, -1, 1, 1, -5, 4]
+    print(max_sum(nums))

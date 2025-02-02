@@ -31,7 +31,6 @@ def brute_force(nums):
         for j in range(len(nums)):
             if i != j:
                 product *= nums[j]
-
         ans.append(product)
     return ans
 

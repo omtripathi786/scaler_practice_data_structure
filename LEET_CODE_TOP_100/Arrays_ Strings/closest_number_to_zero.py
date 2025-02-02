@@ -22,6 +22,7 @@ Constraints:
 -105 <= nums[i] <= 105
 """
 
+
 def solve(nums):
     closest = nums[0]
     for num in nums:
@@ -33,8 +34,9 @@ def solve(nums):
     else:
         return closest
 
+
 if __name__ == '__main__':
-    nums = [-4,-2,1,4,8]
+    nums = [-4, -2, 1, 4, 8]
     print(solve(nums))
-    nums = [2,-1,1]
+    nums = [2, -1, 1]
     print(solve(nums))

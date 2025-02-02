@@ -19,11 +19,12 @@ Constraints:
 s and t consist only of lowercase English letters.
 """
 
+
 def solution(s, t):
     S = len(s)
     T = len(t)
-    if s == "" : return True
-    if S > T : return False
+    if s == "": return True
+    if S > T: return False
     j = 0
     for i in range(T):
         if t[i] == s[j]:
@@ -31,6 +32,7 @@ def solution(s, t):
                 return True
             j += 1
     return False
+
 
 if __name__ == '__main__':
     s, t = "abc", "ahbgdc"

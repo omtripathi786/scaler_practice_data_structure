@@ -37,7 +37,7 @@ def brute_force(nums):
 
 def solution(nums):
     count = 0
-    ans = float('-inf')
+    ans = -1
     for num in nums:
         if count == 0:
             ans = num

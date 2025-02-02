@@ -20,9 +20,10 @@ Constraints:
 strs[i] consists of only lowercase English letters.
 """
 
+
 def solution(strs):
-    #TIME: O(n*m)
-    #SPACE: O(1)
+    # TIME: O(n*m)
+    # SPACE: O(1)
     min_length = len(min(strs, key=len))
     i = 0
     while i < min_length:
@@ -32,6 +33,7 @@ def solution(strs):
         i += 1
     return s[:i]
 
+
 if __name__ == '__main__':
-    strs = ["flower","flow","flight"]
+    strs = ["flower", "flow", "flight"]
     print(solution(strs))
